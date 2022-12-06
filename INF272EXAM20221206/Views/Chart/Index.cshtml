@@ -1,0 +1,102 @@
+﻿@model List<INF272EXAM20221206.Models.NumberSoldVM>
+@using Newtonsoft.Json;
+
+@{
+    ViewBag.Title = "Chart Information";
+}
+
+<h2>Number of copies of Goat Simulator 3 sold per store</h2>
+
+<br />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js"
+        integrity="sha512-d6nObkPJgV791iTGuBoVC9Aa2iecqzJRE0Jiqvk85BhLHAPhWqkuBiQb1xz2jvuHNqHLYoN3ymPfpiB1o+Zgpw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<div class="row">
+    <canvas id="chart"></canvas>
+</div>
+
+<br />
+
+<div>
+    <button class="btn btn-primary" onclick="ShowTable()">Show Most Sold Information</button>
+
+    <table id="mytable" class="table table-striped" style="display:none;">
+        <thead>
+            <tr>
+                <th>Store Name</th>
+                <th>Most Sold Game</th>
+                <th>Number Sold</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    // AJAX - to show the table and detailed data.
+
+    // Complete as part of question (Section A - 1.2)
+    // The AJAX function is referencing TableView in the chart controller.
+    // Be careful what sections in the HTML page is being targeted to make use of the correct cross referencing.
+    // Errors in cross referencing will prevent the table from being displayed correctly.
+
+    function ShowTable() {
+        $.ajax({
+
+    }
+
+    // Chart.js - to show the data passed from the controller
+
+    var rawData = @Html.Raw(JsonConvert.SerializeObject(Model));
+
+    // Sort descending order according to number of copies sold
+
+    // Complete as part of question (Section A - 1.1) 
+    // ----------------------------------------------------------------------------
+
+
+
+
+
+
+
+            // Left in - to use as part of answer. Complete sections around this part.
+            // Edited out. Edit back in to test your solution.
+            // ----------------------------------------------------------------------------
+
+            //label: 'Store Branch',
+            //data: dataVals,
+            //backgroundColor: [
+            //    'rgba(255, 99, 132, 0.2)',
+            //    'rgba(255, 159, 64, 0.2)',
+            //    'rgba(255, 205, 86, 0.2)',
+            //    'rgba(75, 192, 192, 0.2)',
+            //    'rgba(54, 162, 235, 0.2)',
+            //    'rgba(153, 102, 255, 0.2)',
+            //    'rgba(201, 203, 207, 0.2)'
+            //],
+            //borderColor: [
+            //    'rgb(255, 99, 132)',
+            //    'rgb(255, 159, 64)',
+            //    'rgb(255, 205, 86)',
+            //    'rgb(75, 192, 192)',
+            //    'rgb(54, 162, 235)',
+            //    'rgb(153, 102, 255)',
+            //    'rgb(201, 203, 207)'
+            //],
+            //borderWidth: 1
+        }]
+    };
+
+    // Complete as part of question (Section A - 1.1)
+    // ----------------------------------------------------------------------------
+
+
+
+
+
+
+</script>

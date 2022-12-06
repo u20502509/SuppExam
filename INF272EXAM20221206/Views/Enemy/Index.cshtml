@@ -1,0 +1,37 @@
+﻿@using INF272EXAM20221206.OOP_Models
+@model List<Enemy>
+
+@{
+    ViewBag.Title = "Enemy Information";
+}
+
+<h2>Enemy Information (Player health: 100)</h2>
+
+<div>
+    <table id="mytable" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Stats</th>
+                <th>Damage</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var enemy in Model)
+                {
+            <tr>
+                <td>@enemy.GetType().Name</td>
+                <td>@enemy.Stats()</td>
+                @if (enemy.Damage() >= 100)
+                        {
+                <td style="color:red;">@enemy.Damage()</td>
+                        }
+                    else
+                        {
+                <td>@enemy.Damage()</td>
+                        }
+            </tr>
+                }
+        </tbody>
+    </table>
+</div>
